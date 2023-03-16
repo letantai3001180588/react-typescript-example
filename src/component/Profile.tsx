@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {isRequire,isEmail,removeError,isKeyUpInput} from '../services/auth'
+import Nav from './Nav';
 
 function Profile() {
     const [fullname,setFullname]=useState('')
@@ -33,55 +34,58 @@ function Profile() {
     })
 
   return (
-    <div className='container'>
-        <div className='card'>
-            <div className='card-title-profile'>Profile</div>
-            
-            <div className='label-profile'>Fullname:</div>
-            <div className='field' id='fullname'>
-                <input type='text' className='input'  value={fullname} onChange={(e)=>setFullname(e.target.value)} onKeyUp={()=>isKeyUpInput('fullname')} onBlur={()=>isRequire('fullname',fullname)}/>
-                <span className='message-error'></span>
-            </div>
+    <>
+        <Nav/>
+        <div className='container'>
+            <div className='card'>
+                <div className='card-title-profile'>Profile</div>
+                
+                <div className='label-profile'>Fullname:</div>
+                <div className='field' id='fullname'>
+                    <input type='text' className='input'  value={fullname} onChange={(e)=>setFullname(e.target.value)} onKeyUp={()=>isKeyUpInput('fullname')} onBlur={()=>isRequire('fullname',fullname)}/>
+                    <span className='message-error'></span>
+                </div>
 
-            <div className='label-profile'>Day Of Birth:</div>
-            <div className='field' id='birth'>
-                <input type='date' id='datefield' className='input' value={birth} onChange={(e)=>setBirth(e.target.value)} onChangeCapture={()=>isKeyUpInput('birth')}  onBlur={()=>isRequire('birth',birth)}/>
-                <span className='message-error'></span>
-            </div>
+                <div className='label-profile'>Day Of Birth:</div>
+                <div className='field' id='birth'>
+                    <input type='date' id='datefield' className='input' value={birth} onChange={(e)=>setBirth(e.target.value)} onChangeCapture={()=>isKeyUpInput('birth')}  onBlur={()=>isRequire('birth',birth)}/>
+                    <span className='message-error'></span>
+                </div>
 
-            <div className='label-profile'>Email:</div>
-            <div className='field' id='email'>
-                <input type='email' className='input' value={email} onChange={(e)=>setEmail(e.target.value)} onKeyUp={()=>isKeyUpInput('email')} onBlur={()=>isEmail('email',email)}/>
-                <span className='message-error'></span>
-            </div>            
+                <div className='label-profile'>Email:</div>
+                <div className='field' id='email'>
+                    <input type='email' className='input' value={email} onChange={(e)=>setEmail(e.target.value)} onKeyUp={()=>isKeyUpInput('email')} onBlur={()=>isEmail('email',email)}/>
+                    <span className='message-error'></span>
+                </div>            
 
-            <div className='label-profile'>Phone:</div>
-            <div className='field' id='phone'>
-                <input type='number' className='input'  value={phone} onChange={(e)=>setPhone(e.target.value)} onKeyUp={()=>isKeyUpInput('phone')} onBlur={()=>isRequire('phone',phone)}/>
-                <span className='message-error'></span>
-            </div>
+                <div className='label-profile'>Phone:</div>
+                <div className='field' id='phone'>
+                    <input type='number' className='input'  value={phone} onChange={(e)=>setPhone(e.target.value)} onKeyUp={()=>isKeyUpInput('phone')} onBlur={()=>isRequire('phone',phone)}/>
+                    <span className='message-error'></span>
+                </div>
 
-            <div className='form-update'>
-                <div></div>
-                <div>
-                    <button className='btn-signIn' onClick={()=>{
-                        isRequire('fullname',fullname);
-                        isRequire('birth',birth);
-                        isRequire('phone',phone);
-                        isEmail('email',email);
-                    }}>
-                        Update
-                    </button>
-                    <button className='btn-cancel' onClick={()=>{
-                        removeError('email');removeError('fullname');removeError('birth');removeError('phone');
-                        setBirth('');setEmail('');setFullname('');setPhone('')
-                    }}>
-                        Cancel
-                    </button>
+                <div className='form-update'>
+                    <div></div>
+                    <div>
+                        <button className='btn-signIn' onClick={()=>{
+                            isRequire('fullname',fullname);
+                            isRequire('birth',birth);
+                            isRequire('phone',phone);
+                            isEmail('email',email);
+                        }}>
+                            Update
+                        </button>
+                        <button className='btn-cancel' onClick={()=>{
+                            removeError('email');removeError('fullname');removeError('birth');removeError('phone');
+                            setBirth('');setEmail('');setFullname('');setPhone('')
+                        }}>
+                            Cancel
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </>
   );
 }
 
