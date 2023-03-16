@@ -3,9 +3,8 @@
 This project was React js with typescript, sass, react-router-dom
 
 ## Link demo
-Link form login:
-Link form update profile:
-## Available Scripts
+Link :[login](https://form-login-and-updateprofile.onrender.com)
+
 
 In the project directory, you can run:
 
@@ -13,8 +12,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000/login) to view it in the browser.
-Open [http://localhost:3000](http://localhost:3000/profile) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Layout 
 
@@ -28,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000/profile) to view it in the br
 ![login](public/update_profile.png)
 
 - validate update profile
-![login](public/login.png)
+![login](public/validate_update_profile.png)
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
