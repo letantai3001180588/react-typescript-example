@@ -7,15 +7,15 @@ Link : https://form-login-and-updateprofile.onrender.com
 
 ## User Login Diagram
 ![Diagram](public/diagram_login.png)
-## Describe how to login the user
+## Describe how to login the user.
 – The App component is a container with React Router (BrowserRouter). 
 – Home component is public for all visitor.
 - Basing on the state, the navbar can display its items.
-- When web active, data is stored on Local Storage automatically
+- When web active, data is stored on Local Storage automatically.
 – Fisrt, Login components have form for data submission. 
 - After,Login components is checked. 
 - Next they call methods from Auth.tsx to make login request.
-- Finally, Auth.tsx get data from Local Storage. Auth.tsx check username, password and response access login or failture
+- Finally, Auth.tsx get data from Local Storage. Auth.tsx check username, password and response access login or failture.
 
 ## Data example
 ```
