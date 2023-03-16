@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import {isEmail,isPassword,isKeyUpInput} from '../services/auth'
+import {isEmail,isPassword,isKeyUpInput, login} from '../services/auth'
 import Nav from './Nav';
 
 function Login() {
-    const [show,setShow]=useState(false)
+    const [showPassword,setShowPassword]=useState(false)
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
     
@@ -21,18 +21,18 @@ function Login() {
                 
                 <div className='label-login'>Password:</div>
                 <div className='field' id='password'>
-                    <input type={!show?'password':'text'} className='input' placeholder='********' value={password} onChange={(e)=>setPassword(e.target.value)} onKeyUp={()=>isKeyUpInput('password')} onBlur={()=>isPassword('password',password)}/>
+                    <input type={!showPassword?'password':'text'} className='input' placeholder='********' value={password} onChange={(e)=>setPassword(e.target.value)} onKeyUp={()=>isKeyUpInput('password')} onBlur={()=>isPassword('password',password)}/>
                     <span className='message-error'></span>
                 </div>
 
                 <div className='form-check'>
                     <div className='form-checkbox'>
-                        <input id='input-password' type='checkbox' onChange={()=>setShow((show)=>!show)}/>
+                        <input id='input-password' type='checkbox' onChange={()=>setShowPassword((showPassword,)=>!showPassword,)}/>
                         <div className='check-content'>
                             Show password
                         </div>
                     </div>
-                    <button className='btn-signIn' onClick={()=>{isEmail('email',email);isPassword('password',password)}}>Sign in</button>
+                    <button className='btn-signIn' onClick={()=>login(email,password)}>Sign in</button>
                 </div>
             </div>
         </div>

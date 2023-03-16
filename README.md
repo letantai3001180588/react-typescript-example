@@ -3,13 +3,29 @@
 This project was React js with typescript, sass, react-router-dom
 
 ## Link demo
-Link :[link](https://form-login-and-updateprofile.onrender.com) https://form-login-and-updateprofile.onrender.com
+Link : https://form-login-and-updateprofile.onrender.com
+
+## User Login Diagram
+![Diagram](public/diagram_login.png)
 
 ## User Login and User Update Flow 
 ![Flow login](public/flow_login.png)
-![Flow login](public/flow_update_profile.png)
+![Flow proflie](public/flow_update_profile.png)
 
-In the project directory, you can run:
+## Project Structure
+![Struct](public/structure.png)
+## Describe how to login the user
+– The App component is a container with React Router (BrowserRouter). Basing on the state, the navbar can display its items.
+– Home component is public for all visitor.
+- When web active, data is stored on Local Storage automatically
+– Login components have form for data submission. They call methods from Auth.tsx to make login request.
+- Auth.tsx get data from Local Storage. Next, find username, password and response access or failture
+
+## Run project in local
+First, you open terminal in Vscode and run the command:
+git clone https://github.com/letantai3001180588/react-typescript-example.git
+
+Next,in the project directory, you can run:
 
 ### `cd my-app`
 ### `npm start`
