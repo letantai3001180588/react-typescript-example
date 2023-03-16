@@ -17,6 +17,19 @@ Link : https://form-login-and-updateprofile.onrender.com
 - Next they call methods from Auth.tsx to make login request.
 - Finally, Auth.tsx get data from Local Storage. Auth.tsx check username, password and response access login or failture
 
+## Data example
+```
+data=[
+    {
+        username:'admin@gmail.com',
+        password:'12345678'
+    },
+    {
+        username:'user@gmail.com',
+        password:'87654321'
+    }
+]
+```
 ## User Login and User Update Flow 
 ![Flow login](public/flow_login.png)
 ![Flow proflie](public/flow_update_profile.png)
