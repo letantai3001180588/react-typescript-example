@@ -3,7 +3,7 @@
 This project was React js with typescript, sass, react-router-dom
 
 ## Link demo
-Link :[login](https://form-login-and-updateprofile.onrender.com)
+Link :[link](https://form-login-and-updateprofile.onrender.com) https://form-login-and-updateprofile.onrender.com
 
 
 In the project directory, you can run:
