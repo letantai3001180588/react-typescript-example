@@ -5,6 +5,9 @@ This project was React js with typescript, sass, react-router-dom
 ## Link demo
 Link :[link](https://form-login-and-updateprofile.onrender.com) https://form-login-and-updateprofile.onrender.com
 
+## User Login and User Update Flow 
+![Flow login](public/flow_login.png)
+![Flow login](public/flow_update_profile.png)
 
 In the project directory, you can run:
 
