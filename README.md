@@ -40,10 +40,10 @@ data=[
 
 ## Run project in local
 First, you open terminal in Vscode and run the command:
-git clone https://github.com/letantai3001180588/react-typescript-example.git
+### git clone https://github.com/letantai3001180588/react-typescript-example.git
 
 Next,in the project directory, you can run:
-
+### `npm i`
 ### `cd my-app`
 ### `npm start`
 
